@@ -3,7 +3,22 @@
 
   <p [ngClass]="{'green': isParagTitle, 'default-color': !isParagTitle}">Paragraph title</p>
 
-  <button class='uk-button uk-button-primary uk-button-small uk-margin-right' (click)='changeTitleColor()'>Change Title Color</button>
+  <button class='uk-button uk-button-primary uk-button-small uk-margin-right' (click)='changeTitleColor()'>Change Title
+    Color
+  </button>
 
-  <button class='uk-button uk-button-danger uk-button-small' (click)='changeParagColor()'>Change Paragraph Color</button>
+  <button class='uk-button uk-button-danger uk-button-small' (click)='changeParagColor()'>Change Paragraph Color
+  </button>
+
+  <hr class='uk-hr'>
+
+  <ul *ngIf='users' class="uk-list">
+    <li *ngFor='let user of users.data' class='uk-card uk-card-default uk-padding'>
+
+      <img class="uk-border-circle uk-margin-right" width="100" height="100" [src]='user.avatar'/>
+      <span>{{user.first_name}} {{user.last_name}}</span>
+
+    </li>
+  </ul>
+
 </section>
