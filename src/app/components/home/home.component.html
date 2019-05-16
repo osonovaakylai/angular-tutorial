@@ -1,0 +1,9 @@
+<section class='uk-container uk-container-large uk-margin-large-top uk-margin-large-bottom'>
+  <h1 [class.gray]="isHomeTitle">Home</h1>
+
+  <p [ngClass]="{'green': isParagTitle, 'default-color': !isParagTitle}">Paragraph title</p>
+
+  <button class='uk-button uk-button-primary uk-button-small uk-margin-right' (click)='changeTitleColor()'>Change Title Color</button>
+
+  <button class='uk-button uk-button-danger uk-button-small' (click)='changeParagColor()'>Change Paragraph Color</button>
+</section>
